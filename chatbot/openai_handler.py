@@ -25,6 +25,8 @@ class OpenAIHandler:
             {"role": "system", "content": "당신은 웹 애플리케이션 지원 도우미입니다."},
             {"role": "user", "content": f"컨텍스트: {context}\n\n질문: {question}"}
         ]
+        # role: system의 역할은 챗봇의 역할을 정의
+        # role: user의 역할은 사용자의 질문을 정의
         
         response = self.client.chat.completions.create(
             model="gpt-4o-mini",
