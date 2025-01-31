@@ -22,6 +22,7 @@ class OpenAIHandler:
     # GPT를 사용한 응답 생성
     async def generate_response(self, context: str, question: str) -> str:
         messages = [
+             #{"role": "system", "content": "주어진 컨텍스트의 답변을 그대로 사용하세요. 컨텍스트에 있는 답변을 수정하거나 개선하지 마세요."},
             {"role": "system", "content": "당신은 웹 애플리케이션 지원 도우미입니다."},
             {"role": "user", "content": f"컨텍스트: {context}\n\n질문: {question}"}
         ]

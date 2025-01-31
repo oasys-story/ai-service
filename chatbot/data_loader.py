@@ -1,5 +1,5 @@
 import asyncio
-from data_preparation import DataPreparation, prepare_qa_dataset
+from chatbot.data_preparation import DataPreparation, prepare_qa_dataset
 
 async def main():
     # data_preparation.py의 prepare_qa_dataset() 함수에서 QA 데이터 가져옴
